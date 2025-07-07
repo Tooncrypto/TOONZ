@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>$TOONZ - 10000% CHAOTIC</title>
+
+  <!-- AOS Animate On Scroll Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -11,13 +14,27 @@
       background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
       color: #fff;
       text-align: center;
+      overflow-x: hidden;
     }
 
     header {
-      background-image: url('https://https://imgur.com/a/5fXRRdi
+      background-image: url('https://i.imgur.com/zfOp3x0.jpg'); /* Gambar roket anjing */
       background-size: cover;
       background-position: center;
-      padding: 100px 20px;
+      padding: 200px 20px;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4); /* gelapin sedikit supaya teks terbaca */
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -31,10 +48,11 @@
       font-size: 1.5em;
       color: #ffcc00;
       margin-top: 10px;
+      text-shadow: 1px 1px #000;
     }
 
     .buttons {
-      margin: 40px 0;
+      margin: 50px 0;
     }
 
     .btn {
@@ -49,16 +67,19 @@
       text-decoration: none;
       display: inline-block;
       transition: 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     }
 
     .btn:hover {
       background: #ff3399;
+      transform: scale(1.05);
     }
 
     footer {
-      margin-top: 50px;
+      margin-top: 60px;
       font-size: 0.9em;
       color: #aaa;
+      padding-bottom: 40px;
     }
 
     a {
@@ -79,24 +100,38 @@
         padding: 12px 20px;
         font-size: 1em;
       }
+
+      header {
+        padding: 140px 20px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>$TOONZ</h1>
-    <div class="tagline">10000% CHAOTIC. NO ROADMAP. JUST MAYHEM.</div>
+    <div class="header-content" data-aos="fade-down">
+      <h1>$TOONZ</h1>
+      <div class="tagline">10000% CHAOTIC. NO ROADMAP. JUST MAYHEM.</div>
+    </div>
   </header>
 
-  <div class="buttons">
+  <div class="buttons" data-aos="fade-up">
     <a href="https://t.me/ToonzonSolana" class="btn" target="_blank">Join Telegram</a>
     <a href="https://x.com/TOONZonSol" class="btn" target="_blank">Follow on X</a>
   </div>
 
-  <footer>
+  <footer data-aos="zoom-in">
     💥 A meme-fueled cartoon riot on Solana – 100% community owned.<br />
     📈 Chart: <a href="https://dexscreener.com/solana/BvRMF29e5J16dyEpd2hRSsaCGpWNWFVfB2X1oMcXpump" target="_blank">View on Dexscreener</a><br />
     🌐 Website: <a href="https://tooncrypto.github.io/TOONZ" target="_blank">tooncrypto.github.io/TOONZ</a>
   </footer>
+
+  <!-- AOS Animate On Scroll Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 </html>
