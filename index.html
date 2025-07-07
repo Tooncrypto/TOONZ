@@ -4,134 +4,102 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>$TOONZ - 10000% CHAOTIC</title>
-
-  <!-- AOS Animate On Scroll Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Arial Black', sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: #fff;
+      background: linear-gradient(135deg, #1d0033, #220044);
+      color: white;
       text-align: center;
       overflow-x: hidden;
     }
 
-    header {
-      background-image: url('https://imgur.com/a/5fXRRdi
-      background-size: cover;
-      background-position: center;
-      padding: 200px 20px;
-      position: relative;
+    .banner {
+      width: 100%;
+      max-width: 100%;
+      display: block;
     }
 
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.4); /* gelapin sedikit supaya teks terbaca */
-    }
-
-    .header-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin: 0;
+    .title {
       color: #00ff00;
-      text-shadow: 2px 2px #000;
+      font-size: 2em;
+      margin: 20px 0 5px;
     }
 
-    .tagline {
-      font-size: 1.5em;
-      color: #ffcc00;
-      margin-top: 10px;
-      text-shadow: 1px 1px #000;
+    .subtitle {
+      color: #ffd700;
+      font-size: 1.2em;
+      margin-bottom: 30px;
     }
 
     .buttons {
-      margin: 50px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      animation: fadeUp 1s ease-out forwards;
+      opacity: 0;
     }
 
-    .btn {
-      background: #ff007f;
-      border: none;
+    .buttons a {
+      padding: 12px 24px;
+      background: #ff0080;
       color: white;
-      padding: 15px 30px;
-      margin: 10px;
-      font-size: 1.2em;
-      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
       border-radius: 10px;
-      text-decoration: none;
-      display: inline-block;
-      transition: 0.3s;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .btn:hover {
-      background: #ff3399;
-      transform: scale(1.05);
+    .buttons a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #ff0080aa;
     }
 
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #aaa;
-      padding-bottom: 40px;
+    .info {
+      font-size: 1em;
+      color: #cccccc;
+      margin-bottom: 30px;
     }
 
-    a {
-      color: #00ffff;
+    .info a {
+      color: #00ccff;
       text-decoration: none;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2em;
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
       }
-
-      .tagline {
-        font-size: 1.2em;
-      }
-
-      .btn {
-        padding: 12px 20px;
-        font-size: 1em;
-      }
-
-      header {
-        padding: 140px 20px;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="header-content" data-aos="fade-down">
-      <h1>$TOONZ</h1>
-      <div class="tagline">10000% CHAOTIC. NO ROADMAP. JUST MAYHEM.</div>
-    </div>
-  </header>
+  <!-- Gambar utama -->
+  <img class="banner" src="toonz-banner.jpg" alt="$TOONZ Banner" />
 
-  <div class="buttons" data-aos="fade-up">
-    <a href="https://t.me/ToonzonSolana" class="btn" target="_blank">Join Telegram</a>
-    <a href="https://x.com/TOONZonSol" class="btn" target="_blank">Follow on X</a>
+  <!-- Judul & tagline -->
+  <div class="title">$TOONZ</div>
+  <div class="subtitle">10000% CHAOTIC. NO ROADMAP. JUST MAYHEM.</div>
+
+  <!-- Tombol sosial -->
+  <div class="buttons">
+    <a href="https://t.me/yourtelegram" target="_blank">Join Telegram</a>
+    <a href="https://x.com/yourxhandle" target="_blank">Follow on X</a>
   </div>
 
-  <footer data-aos="zoom-in">
+  <!-- Info tambahan -->
+  <div class="info">
     💥 A meme-fueled cartoon riot on Solana – 100% community owned.<br />
-    📈 Chart: <a href="https://dexscreener.com/solana/BvRMF29e5J16dyEpd2hRSsaCGpWNWFVfB2X1oMcXpump" target="_blank">View on Dexscreener</a><br />
+    📈 Chart: <a href="https://dexscreener.com" target="_blank">View on Dexscreener</a><br />
     🌐 Website: <a href="https://tooncrypto.github.io/TOONZ" target="_blank">tooncrypto.github.io/TOONZ</a>
-  </footer>
-
-  <!-- AOS Animate On Scroll Script -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  </div>
 
 </body>
 </html>
